@@ -1,6 +1,6 @@
 # TV Show Schema
 
-- ID (string, series/<num>)
+- ID (string, series/{num})
 - Names (array)
     - language (string, some ISO code)
     - name (string)

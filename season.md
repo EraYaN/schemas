@@ -1,6 +1,6 @@
 # Season Schema
 
-- ID (string, series/<num>/season/<num>)
+- ID (string, series/{num}/season/{num})
 - Number (int)
 - Names (array)
     - language (string, some ISO code)

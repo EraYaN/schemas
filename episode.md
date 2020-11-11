@@ -1,6 +1,6 @@
 # Episode Schema
 
-- ID (string, series/<num>/season/<num>/episode/<num>)
+- ID (string, series/{num}/season/{num}/episode/{num})
 - Numbers (array of object)
     - kind (enum, absolute/tv/disk)
     - number (int)}
