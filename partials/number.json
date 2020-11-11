@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://schema.themetadb.org/partial/number.json",
+    "type": "object",
+    "title": "The number schema",
+    "description": "The number partial schema.",
+    "default": {},    
+    "required": [
+        "number"
+    ],
+    "properties": {        
+        "number": {
+            "$id": "#/properties/number",
+            "type": "integer",
+            "title": "The int schema",
+            "description": "The actual number.",
+            "default": 1
+        },        
+        "kind": {
+            "$id": "#/properties/kind",
+            "type": "string",
+            "title": "The kind schema",
+            "description": "The kind of numbering this number belongs to.",
+            "default": "tv",
+            "enum": ["tv", "disk", "streaming", "absolute"]
+            
+        }
+    }
+}

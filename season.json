@@ -1,0 +1,94 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://schema.themetadb.org/season.json",
+    "type": "object",
+    "title": "The season schema",
+    "description": "The season root schema.",
+    "default": {},    
+    "required": [
+        "id",
+        "number",
+        "names"
+    ],
+    "properties": {    
+        "id": {
+            "$id": "#/properties/id",
+            "type": "string",
+            "title": "The id schema",
+            "description": "The globally unique identifier for the season.",
+            "examples": [
+                "season/123355623"
+            ]
+        },
+        "number": {
+            "$id": "#/properties/number",
+            "type": "integer",
+            "title": "The number schema",
+            "description": "The season number.",
+            "default": 1
+        },
+        "names": {
+            "$id": "#/properties/names",
+            "type": "array",
+            "title": "The names schema",
+            "uniqueItems": true,
+            "description": "The list of names for this season, if empty localized version of Season <number> is used.",
+            "items": {
+                "$ref": "file:/partials/name.json"
+            }
+        },
+        "original_country": {
+            "$id": "#/properties/original_country",
+            "type": "string",
+            "title": "The original country schema",
+            "description": "An ISO 3166-1 Alpha-2 code",
+            "default": "",
+            "examples": [
+                "US",
+                "NL"
+            ]
+        },
+        "original_language": {
+            "$id": "#/properties/original_language",
+            "type": "string",
+            "title": "The original language schema",
+            "description": "An ISO 639-3 language code with undetermined meaning the same value as the original countries main language.",
+            "default": "und",
+            "examples": [
+                "nld",
+                "eng",
+                "und"
+            ]
+        },
+        "characters": {
+            "$id": "#/properties/characters",
+            "type": "array",
+            "title": "The characters schema",
+            "uniqueItems": true,
+            "description": "The list of characters for this show.",
+            "items": {
+                "$ref": "file:/character.json"
+            }
+        },
+        "artworks": {
+            "$id": "#/properties/artworks",
+            "type": "array",
+            "title": "The artworks schema",
+            "uniqueItems": true,
+            "description": "The list of artworks for this show.",
+            "items": {
+                "$ref": "file:/artwork.json"
+            }
+        },
+        "episodes": {
+            "$id": "#/properties/episodes",
+            "type": "array",
+            "title": "The episodes schema",
+            "uniqueItems": true,
+            "description": "The list of episodes for this show.",
+            "items": {
+                "$ref": "file:/episode.json"
+            }
+        }
+    }
+}
